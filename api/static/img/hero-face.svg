@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="title desc">
+  <title id="title">Skin analysis illustration</title>
+  <desc id="desc">A stylized face silhouette with skin scan markers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde6dc"/>
+      <stop offset="100%" stop-color="#f8b8a3"/>
+    </linearGradient>
+    <linearGradient id="face" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7d3c3"/>
+      <stop offset="100%" stop-color="#e6a98f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="800" rx="48" fill="url(#bg)"/>
+  <circle cx="400" cy="400" r="250" fill="#fff5ef" opacity="0.5"/>
+  <path d="M400 164c-107 0-194 96-194 215 0 94 54 177 133 205 19 7 32 25 32 45v34c0 15 13 28 29 28h0c16 0 29-13 29-28v-34c0-20 13-38 32-45 79-28 133-111 133-205 0-119-87-215-194-215Z" fill="url(#face)"/>
+  <ellipse cx="330" cy="390" rx="22" ry="16" fill="#6d4b43"/>
+  <ellipse cx="470" cy="390" rx="22" ry="16" fill="#6d4b43"/>
+  <path d="M339 510c36 32 86 32 122 0" fill="none" stroke="#9c5d4c" stroke-linecap="round" stroke-width="18"/>
+  <path d="M400 420c-11 22-17 44-17 67 0 13 9 21 23 21 10 0 17-3 24-8" fill="none" stroke="#c07d67" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+  <circle cx="272" cy="316" r="26" fill="#f08d88" opacity="0.85"/>
+  <circle cx="528" cy="300" r="22" fill="#f7b267" opacity="0.9"/>
+  <circle cx="546" cy="468" r="20" fill="#d96c6c" opacity="0.9"/>
+  <circle cx="252" cy="490" r="18" fill="#f08d88" opacity="0.8"/>
+  <path d="M252 316h-72M252 316v-72M252 316l-52-52" stroke="#7b5264" stroke-linecap="round" stroke-width="10"/>
+  <path d="M546 468h72M546 468v72M546 468l48 48" stroke="#7b5264" stroke-linecap="round" stroke-width="10"/>
+  <path d="M528 300h58M528 300V242" stroke="#7b5264" stroke-linecap="round" stroke-width="10"/>
+</svg>

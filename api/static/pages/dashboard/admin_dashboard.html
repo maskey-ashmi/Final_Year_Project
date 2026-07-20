@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Insights - SkinSense AI</title>
+  <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+
+<body class="editorial-shell">
+  <div class="ambient-blur ambient-blur-one"></div>
+  <div class="ambient-blur ambient-blur-two"></div>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg editorial-nav">
+        <a class="navbar-brand brand-mark" href="/">
+          <span class="brand-emblem">S</span>
+          <span><strong>SkinSense</strong><small>Editorial skin analysis</small></span>
+        </a>
+        <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul id="navbarMainLinks" class="navbar-nav ms-auto align-items-lg-center gap-lg-2"></ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container mt-3">
+    <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+  </div>
+  <main class="site-main">
+    <section class="page-shell">
+      <div class="container">
+        <div id="admin-unauthorized" class="editorial-alert d-none">You are not authorized to view the Clinical Insights
+          workspace.</div>
+        <div id="admin-content" class="d-none">
+          <div class="page-hero mb-4">
+            <div>
+              <span class="eyebrow">Clinical insights</span>
+              <h1 class="page-title">Welcome back Admin!</h1>
+              <p class="page-subtitle">Here's a quick overview of your clinic's activity.</p>
+            </div>
+          </div>
+          <div class="admin-grid">
+            <section class="editorial-panel bento-card">
+              <span class="eyebrow">Users</span>
+              <h2 id="admin-users-count">0</h2>
+              <p class="mb-0 text-muted">Registered accounts in the app.</p>
+            </section>
+            <section class="editorial-panel bento-card">
+              <span class="eyebrow">Saved photos</span>
+              <h2 id="admin-scans-count">0</h2>
+              <p class="mb-0 text-muted">Prediction records with uploaded images.</p>
+            </section>
+            <section class="editorial-panel bento-card">
+              <span class="eyebrow">Doctors</span>
+              <h2 id="admin-doctors-count">0</h2>
+              <p class="mb-0 text-muted">Available specialists in the booking flow.</p>
+            </section>
+            <section class="editorial-panel bento-card">
+              <span class="eyebrow">Most Common</span>
+              <h2 id="admin-most-common-condition">N/A</h2>
+              <p class="mb-0 text-muted">Most frequent skin condition detected.</p>
+            </section>
+
+          </div>
+          <div class="row g-4 mt-1">
+            <div class="col-lg-5">
+              <div class="editorial-panel h-100">
+                <div class="section-head mb-3">
+                  <div>
+                    <span class="eyebrow">Recent users</span>
+                    <h2 class="section-title">Account review</h2>
+                  </div>
+                </div>
+                <div id="admin-users-list" class="appointment-list"></div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="editorial-panel h-100">
+                <div class="section-head mb-3">
+                  <div>
+                    <span class="eyebrow">Batch review</span>
+                    <h2 class="section-title">Recent bookings and scan operations</h2>
+                  </div>
+                </div>
+                <div id="admin-appointments-list" class="appointment-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-12">
+              <div class="editorial-panel h-100">
+                <div class="section-head mb-3 d-flex justify-content-between align-items-center">
+                  <div>
+                    <span class="eyebrow">Medical Staff</span>
+                    <h2 class="section-title">Doctors Management</h2>
+                  </div>
+                  <button class="btn btn-editorial" data-bs-toggle="modal" data-bs-target="#addDoctorModal">Add
+                    Doctor</button>
+                </div>
+                <div id="admin-doctors-list-full" class="appointment-list row g-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Add Doctor Modal -->
+  <div class="modal fade" id="addDoctorModal" tabindex="-1" aria-labelledby="addDoctorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method="POST" action="/admin/doctors/add">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addDoctorModalLabel">Add Doctor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Specialization</label>
+              <input type="text" class="form-control" name="specialization" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Location</label>
+              <input type="text" class="form-control" name="location">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Experience (Years)</label>
+              <input type="number" class="form-control" name="experience_years">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Rating (e.g. 4.5)</label>
+              <input type="number" step="0.1" max="5.0" min="0.0" class="form-control" name="rating">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-editorial">Add Doctor</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Doctor Modal -->
+  <div class="modal fade" id="editDoctorModal" tabindex="-1" aria-labelledby="editDoctorModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form method="POST" id="editDoctorForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editDoctorModalLabel">Edit Doctor</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" id="editDoctorName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Specialization</label>
+              <input type="text" class="form-control" name="specialization" id="editDoctorSpec" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Location</label>
+              <input type="text" class="form-control" name="location" id="editDoctorLocation">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Experience (Years)</label>
+              <input type="number" class="form-control" name="experience_years" id="editDoctorExp">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Rating (e.g. 4.5)</label>
+              <input type="number" step="0.1" max="5.0" min="0.0" class="form-control" name="rating"
+                id="editDoctorRating">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-editorial">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="mb-0">SkinSense AI</p>
+      <p class="mb-0">Skin scans, photo history, routine guidance, and appointments in one calm flow.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/app-shell.js"></script>
+  <script src="/static/js/admin-dashboard-page.js"></script>
+</body>
+
+</html>

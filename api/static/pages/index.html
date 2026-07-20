@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home - SkinSense</title>
+    <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body class="editorial-shell">
+    <div class="ambient-blur ambient-blur-one"></div>
+    <div class="ambient-blur ambient-blur-two"></div>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg editorial-nav">
+          <a class="navbar-brand brand-mark" href="/">
+            <span class="brand-emblem">S</span>
+            <span><strong>SkinSense</strong><small>Editorial skin analysis</small></span>
+          </a>
+          <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul id="navbarMainLinks" class="navbar-nav ms-auto align-items-lg-center gap-lg-2"></ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container mt-3">
+      <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+    </div>
+    <main class="site-main">
+      <section class="page-shell home-shell">
+        <div class="container">
+          <div class="hero-bento-grid">
+            <div class="editorial-panel hero-copy-card">
+              <span class="eyebrow">SkinSense</span>
+              <h1 class="page-title">Your Path to Clearer Skin Starts with a Scan</h1>
+              <p class="page-subtitle hero-copy-text">
+                Snap a selfie, get your analysis, and follow your personalized plan for radiant skin.The smartest way to understand and treat your skin conditions.
+
+              </p>
+              <div class="hero-button-row">
+                <a id="home-analysis-link" href="/login?next=%2Fscan" class="btn btn-hero btn-lg">BEGIN ANALYSIS</a>
+              </div>
+            </div>
+            <div class="editorial-panel hero-image-card">
+              <img src="static\img\Skincare-bro.svg" alt="Luxury skincare serums and glass bottles arranged in warm natural light" class="hero-product-image" />
+            </div>
+          </div>
+          <div class="bento-grid mt-4">
+            <!-- Our features -->
+  <article class="editorial-panel bento-card d-flex flex-column align-items-center text-center">
+    <span class="bento-number">01</span>
+    <i class="bi bi-camera-fill bento-icon my-3"></i> 
+    <h2 class="section-title">Scan Studio</h2>
+    <p class="mb-0 text-muted">A camera where you can upload photos for analysis and see your results.</p>
+  </article>
+
+  <article class="editorial-panel bento-card d-flex flex-column align-items-center text-center">
+    <span class="bento-number">02</span>
+    <i class="bi bi-calendar-heart bento-icon my-3"></i>
+    <h2 class="section-title">Routine</h2>
+    <p class="mb-0 text-muted">Guidance is presented with warmth, so every routine feels intentional.</p>
+  </article>
+
+  <article class="editorial-panel bento-card d-flex flex-column align-items-center text-center">
+    <span class="bento-number">03</span>
+    <i class="bi bi-shield-check bento-icon my-3"></i>
+    <h2 class="section-title">User Sanctuary</h2>
+    <p class="mb-0 text-muted">Track scans, revisit photos, and stay grounded in a softer interface built around clarity.</p>
+  </article>
+</div>
+        </div>
+<!-- Our mission -->
+        <div class="editorial-panel objective-section mt-4">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <div class="objective-image-wrapper">
+        <img src="static\img\Skincare-amico.svg" alt="Our Vision for Skin Health" class="img-fluid rounded-4" />
+      </div>
+    </div>
+   
+    <div class="col-md-6 ps-md-5">
+      <span class="eyebrow">Our Mission</span>
+      <h2 class="section-title mb-3">Precision Care for Every Skin Story</h2>
+      <p class="text-muted lead-sm">
+        Our objective is to bridge the gap between complex dermatological data and everyday skincare. By leveraging advanced AI analysis, we empower you to understand your skin's unique needs through a lens of clarity and science.
+      </p>
+      <p class="text-muted">
+        We believe that skincare shouldn't be a guessing game. SkinSense is built to provide a calm, intentional space where technology meets editorial beauty, giving you the confidence to follow routines that actually work.
+      </p>
+      <div class="hero-button-row">
+                <a id="home-analysis-link" href="/login?next=%2Fscan" class="btn btn-hero btn-lg">BEGIN ANALYSIS</a>
+              </div>
+    </div>
+  </div>
+</div>
+ <!-- Doctors -->
+<section class="dermatologists-section mt-5">
+  <div class="container">
+    <span class="eyebrow d-block text-center mb-2">Expertise</span>
+    <h2 class="section-title text-center mb-5">Meet Our Dermatologists</h2>
+    
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <article class="editorial-panel bento-card h-100 d-flex flex-column align-items-center text-center">
+          <div class="dr-image-wrapper mb-3">
+            <img src="static\img\img1.jpg" alt="Dr. Maya Sharma" class="dr-portrait" />
+          </div>
+          <h3 class="dr-name mb-1">Dr. Maya Sharma</h3>
+          <span class="dr-specialty mb-2">Cosmetic Dermatology</span>
+          <p class="dr-experience mb-2"><strong>12+ Years Experience</strong></p>
+          <p class="text-muted small">Specializing in non-invasive skin rejuvenation and acne scar treatment.</p>
+          <div class="hero-button-row">
+                <a id="home-analysis-link" href="/login?next=%2Fscan" class="btn btn-hero btn-lg">BOOK APPOINTMENT</a>
+              </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <article class="editorial-panel bento-card h-100 d-flex flex-column align-items-center text-center">
+          <div class="dr-image-wrapper mb-3">
+            <img src="static\img\img2.jpg" alt="Dr. Nisha Karki" class="dr-portrait" />
+          </div>
+          <h3 class="dr-name mb-1">Dr. Nisha Karki</h3>
+          <span class="dr-specialty mb-2">Clinical Pathologist</span>
+          <p class="dr-experience mb-2"><strong>8+ Years Experience</strong></p>
+          <p class="text-muted small">Focused on early detection of skin conditions through AI-assisted imaging.</p>
+          <div class="hero-button-row">
+                <a id="home-analysis-link" href="/login?next=%2Fscan" class="btn btn-hero btn-lg">BOOK APPOINTMENT</a>
+              </div>
+        </article>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <article class="editorial-panel bento-card h-100 d-flex flex-column align-items-center text-center">
+          <div class="dr-image-wrapper mb-3">
+            <img src="static\img\img3.jpg" alt="Dr. Aarav Singh" class="dr-portrait" />
+          </div>
+          <h3 class="dr-name mb-1">Dr. Aarav Singh</h3>
+          <span class="dr-specialty mb-2">Clinical Pathologist</span>
+          <p class="dr-experience mb-2"><strong>10+ Years Experience</strong></p>
+          <p class="text-muted small">Focused on early detection of skin conditions through AI-assisted imaging.</p>
+          <div class="hero-button-row">
+          <a id="home-analysis-link" href="/login?next=%2Fscan" class="btn btn-hero btn-lg">BOOK APPOINTMENT</a>
+              </div>
+        </article>
+      </div>
+    </div> 
+  </div> 
+</section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p class="mb-0">SkinSense</p>
+        <p class="mb-0">Skin scans, photo history, routine guidance, and appointments in one calm flow.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/app-shell.js"></script>
+  </body>
+</html>

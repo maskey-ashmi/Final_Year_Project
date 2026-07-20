@@ -1,0 +1,13 @@
+.env
+
+data/
+dataset/
+models/
+uploads/
+__pycache__/
+runs/
+**/runs/
+rf_result/
+**/rf_result/
+results/
+**/results/

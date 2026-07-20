@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - SkinSense AI</title>
+    <link rel="icon" type="image/svg+xml" href="/static/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body class="editorial-shell">
+    <div class="ambient-blur ambient-blur-one"></div>
+    <div class="ambient-blur ambient-blur-two"></div>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg editorial-nav">
+          <a class="navbar-brand brand-mark" href="/">
+            <span class="brand-emblem">S</span>
+            <span><strong>SkinSense</strong><small>Editorial skin analysis</small></span>
+          </a>
+          <button class="navbar-toggler nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul id="navbarMainLinks" class="navbar-nav ms-auto align-items-lg-center gap-lg-2"></ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container mt-3">
+      <div id="toastContainer" class="toast-container position-fixed top-0 end-0 p-3"></div>
+    </div>
+    <main class="site-main">
+  <section class="auth-shell">
+    <div class="container">
+      <div class="auth-layout shadow-lg overflow-hidden">
+        
+        <div class="auth-story d-none d-lg-flex flex-column justify-content-end p-5">
+          <div class="auth-story-content">
+            <span class="eyebrow text-white mb-2">Skin Entry</span>
+            <h1 class="page-title text-white">A calm ritual for skin insights.</h1>
+            <p style="color: aliceblue;" >Welcome back to your personalized sanctuary.</p>
+          </div>
+        </div>
+
+        <div class="editorial-panel auth-card p-5">
+          <div class="d-flex justify-content-between align-items-start mb-4">
+            <div class="auth-heading">
+              <span id="login-mode-label" class="eyebrow">Personal Sanctuary</span>
+              <h2 id="login-title" class="section-title">Welcome back</h2>
+              <p id="login-copy" class="mb-0 text-muted small">Sign in to your account</p>
+            </div>
+            <a id="login-mode-switch" href="/login?mode=admin" class="btn btn-outline-dark btn-sm rounded-pill px-3">Admin Access</a>
+          </div>
+
+          <form method="POST" action="/login" class="auth-form mt-2">
+            <input id="login-mode-input" type="hidden" name="mode" value="user" />
+            <input id="login-next-input" type="hidden" name="next" value="" />
+            
+            <div class="mb-3">
+              <label for="email" class="form-label small fw-bold">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required />
+            </div>
+            
+            <div class="mb-4">
+              <label for="password" class="form-label small fw-bold">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            
+            <button type="submit" class="btn btn-hero w-100 py-3">
+              <span id="login-submit-label">Enter Skin Sanctuary</span>
+            </button>
+          </form>
+
+          <p class="auth-footnote mt-4 text-center small">
+            New here?</p>
+            <div class="d-flex flex-column align-items-center mt-4">
+            <p>
+             <a href="/signup"  class="btn btn-outline-dark btn-sm rounded-pill px-3">Create your account</a>
+              </p>
+              </div>
+        </div>
+
+      </div> 
+    </div>
+  </section>
+</main>
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <p class="mb-0">SkinSense AI</p>
+        <p class="mb-0">Skin scans, photo history, routine guidance, and appointments in one calm flow.</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/app-shell.js"></script>
+    <script src="/static/js/login-page.js"></script>
+  </body>
+</html>

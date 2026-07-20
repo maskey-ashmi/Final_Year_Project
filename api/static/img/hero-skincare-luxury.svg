@@ -1,0 +1,64 @@
+<svg width="1200" height="960" viewBox="0 0 1200 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="960" rx="48" fill="#F6EEE6"/>
+  <g filter="url(#glowA)">
+    <ellipse cx="314" cy="224" rx="250" ry="134" fill="#FFF9F2"/>
+  </g>
+  <g filter="url(#glowB)">
+    <ellipse cx="912" cy="252" rx="210" ry="116" fill="#EFD8CB"/>
+  </g>
+  <rect y="726" width="1200" height="234" fill="url(#surface)"/>
+  <ellipse cx="584" cy="774" rx="422" ry="52" fill="#D4BCAD" fill-opacity="0.52"/>
+  <g opacity="0.96">
+    <rect x="256" y="300" width="184" height="372" rx="50" fill="url(#bottleLeft)"/>
+    <rect x="286" y="254" width="124" height="90" rx="28" fill="#EEE0D4"/>
+    <rect x="304" y="220" width="88" height="54" rx="18" fill="#C8A696"/>
+    <rect x="286" y="396" width="124" height="176" rx="28" fill="#F6EEE5" fill-opacity="0.64"/>
+    <rect x="324" y="420" width="48" height="118" rx="18" fill="#C9927D" fill-opacity="0.48"/>
+    <path d="M440 354C475 322 524 318 558 344C595 372 616 430 606 486C596 548 560 606 508 644L440 672V354Z" fill="url(#dropperShadow)"/>
+    <rect x="446" y="334" width="160" height="338" rx="42" fill="url(#bottleCenter)"/>
+    <rect x="484" y="268" width="84" height="96" rx="24" fill="#4B3D3A"/>
+    <rect x="500" y="232" width="52" height="54" rx="18" fill="#2D2424"/>
+    <rect x="474" y="414" width="104" height="168" rx="28" fill="#FDF8F2" fill-opacity="0.54"/>
+    <rect x="782" y="408" width="124" height="264" rx="38" fill="url(#jarGlass)"/>
+    <rect x="762" y="366" width="164" height="72" rx="30" fill="#E6D5C6"/>
+    <rect x="786" y="450" width="116" height="126" rx="32" fill="#FFFFFF" fill-opacity="0.38"/>
+  </g>
+  <g opacity="0.65">
+    <path d="M186 682C332 622 442 600 560 600C716 600 842 634 1028 712" stroke="#FFFDF9" stroke-width="8" stroke-linecap="round"/>
+    <path d="M140 718C324 666 484 640 650 646C814 652 938 684 1080 738" stroke="#E7D3C6" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <filter id="glowA" x="0" y="26" width="628" height="396" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+    <filter id="glowB" x="638" y="72" width="548" height="360" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="32" result="effect1_foregroundBlur_1_1"/>
+    </filter>
+    <linearGradient id="surface" x1="600" y1="726" x2="600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9DBCF"/>
+      <stop offset="1" stop-color="#D8C0B2"/>
+    </linearGradient>
+    <linearGradient id="bottleLeft" x1="348" y1="300" x2="348" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="0.55" stop-color="#F1E3D7"/>
+      <stop offset="1" stop-color="#DEBDA9"/>
+    </linearGradient>
+    <linearGradient id="bottleCenter" x1="526" y1="334" x2="526" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#704F47"/>
+      <stop offset="0.45" stop-color="#B98D7E"/>
+      <stop offset="1" stop-color="#D6B3A1"/>
+    </linearGradient>
+    <linearGradient id="dropperShadow" x1="523" y1="334" x2="523" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7F5D54" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#7F5D54" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="jarGlass" x1="844" y1="408" x2="844" y2="672" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDFBF7"/>
+      <stop offset="1" stop-color="#E2CABB"/>
+    </linearGradient>
+  </defs>
+</svg>
